@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Benylde Urquico CpE Portfolio (Copy)</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f5f7fb;--card:#fff;--text:#1b2433;--muted:#4a5568;--brand:#b3202a;--brand2:#1d3557;--line:#dde3ee}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151f;--card:#18202e;--text:#eef2f9;--muted:#b4bfd2;--brand:#ff6b73;--brand2:#9cc3ff;--line:#2a3548}}
+:root[data-theme="dark"]{--bg:#10151f;--card:#18202e;--text:#eef2f9;--muted:#b4bfd2;--brand:#ff6b73;--brand2:#9cc3ff;--line:#2a3548}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "Segoe UI",system-ui,Arial,sans-serif}
+a{color:var(--brand2)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--brand2);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) header{background:#0b1220}}
+:root[data-theme="dark"] header{background:#0b1220}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:700;color:#fff;text-decoration:none;letter-spacing:.3px}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+nav ul a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;font-size:15px}
+nav ul a:hover,nav ul a:focus{background:rgba(255,255,255,.18)}
+.btns{display:flex;gap:8px;align-items:center}
+button.t,#menu{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;font-size:15px}
+#menu{display:none}
+@media(max-width:760px){#menu{display:block}nav{flex-wrap:wrap}nav ul{display:none;flex-direction:column;width:100%;order:3;padding-top:8px}nav ul.open{display:flex}}
+.hero{background:linear-gradient(135deg,#1d3557,#b3202a);color:#fff;padding:64px 20px}
+.hero-in{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+@media(max-width:760px){.hero-in{grid-template-columns:1fr;text-align:center}.hero-in svg{margin:auto}}
+.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:.2em 0}
+.hero p{font-size:18px;max-width:560px}
+.tag{display:inline-block;background:rgba(255,255,255,.16);padding:4px 12px;border-radius:99px;font-size:14px}
+.cta{display:inline-block;margin:6px 8px 0 0;padding:11px 20px;border-radius:10px;background:#fff;color:#1d3557;font-weight:600;text-decoration:none}
+.cta.o{background:transparent;color:#fff;border:2px solid #fff}
+main{max-width:1100px;margin:auto;padding:0 20px}
+section{padding:56px 0 8px}
+h2{font-size:30px;margin:0 0 6px;color:var(--brand2)}
+h2:after{content:"";display:block;width:56px;height:4px;background:var(--brand);border-radius:4px;margin-top:8px}
+.lead{color:var(--muted);max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.card h3{margin:.2em 0 .3em;font-size:19px}
+.card p{margin:.4em 0;color:var(--muted)}
+.chip{display:inline-block;font-size:13px;padding:2px 10px;border-radius:99px;background:var(--bg);border:1px solid var(--line);margin:3px 4px 0 0;color:var(--text)}
+.thumb{width:100%;height:auto;border-radius:10px;display:block;margin-bottom:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.video{aspect-ratio:16/9;border-radius:12px;background:#0b1220;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;text-decoration:none}
+.video span{font-size:46px}
+.tl{border-left:3px solid var(--brand);margin:22px 0 0 8px;padding-left:22px}
+.tl div{margin-bottom:22px;position:relative}
+.tl div:before{content:"";position:absolute;left:-30px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--brand)}
+.tl h3{margin:0}
+form{display:grid;gap:12px}
+label{font-weight:600;font-size:14px}
+input,textarea{width:100%;padding:11px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+form button{padding:12px;border:0;border-radius:10px;background:var(--brand);color:#fff;font-weight:700;font-size:16px;cursor:pointer}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) form button{color:#10151f}}
+:root[data-theme="dark"] form button{color:#10151f}
+footer{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
+:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
+</style>
+</head>
+<body>
+<header>
+<nav aria-label="Main navigation">
+<a class="logo" href="#home">BDCU · CpE</a>
+<div class="btns"><button class="t" id="theme" aria-label="Toggle dark mode">◐</button><button id="menu" aria-label="Open menu" aria-expanded="false">☰</button></div>
+<ul id="links">
+<li><a href="#home">Home</a></li><li><a href="#about">About Me</a></li><li><a href="#courses">Coursework</a></li>
+<li><a href="#projects">Projects</a></li><li><a href="#journey">Personal Journey</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<div class="hero-in">
+<div>
+<span class="tag">1st Year · BS Computer Engineering · Mapúa University</span>
+<h1>Hi, I'm Benylde Dane C. Urquico</h1>
+<p><em>Building a strong foundation in hardware and code today, so I can design technology that makes everyday life easier tomorrow.</em></p>
+<a class="cta" href="#projects">View my projects</a><a class="cta o" href="#contact">Get in touch</a>
+</div>
+<!-- Replace this avatar with your photo: <img src="me.jpg" alt="Photo of Benylde Dane Urquico"> -->
+<svg width="260" height="260" viewBox="0 0 260 260" role="img" aria-label="Avatar of Benylde Dane Urquico with initials BU">
+<circle cx="130" cy="130" r="124" fill="#fff" opacity=".15"/><circle cx="130" cy="130" r="108" fill="#fff"/>
+<circle cx="130" cy="104" r="38" fill="#1d3557"/><path d="M52 206c10-44 46-62 78-62s68 18 78 62a108 108 0 0 1-156 0z" fill="#1d3557"/>
+<text x="130" y="116" text-anchor="middle" font-family="Segoe UI,Arial" font-size="34" font-weight="700" fill="#fff">BU</text>
+</svg>
+</div>
+</div>
+
+<main>
+<section id="about">
+<h2>About Me</h2>
+<p class="lead">I'm a first-year Computer Engineering student at Mapúa University. I'm drawn to the idea that one field lets me work on both the physical side of technology (circuits, microcontrollers) and the logical side (code, algorithms).</p>
+<div class="grid">
+<div class="card"><h3>🎓 Background</h3><p>Currently taking BS Computer Engineering at Mapúa University, learning the fundamentals of engineering, mathematics and programming.</p></div>
+<div class="card"><h3>💡 Interests</h3><p>Learning to code, microcontroller-based devices, emerging technologies such as AI in healthcare, and technology for education.</p></div>
+<div class="card"><h3>🏆 Highlights</h3><p>Co-developed <strong>LearnSmart</strong>, a group project for the Computer Engineering as a Discipline course, and produced videos on emerging technology and global migration.</p>
+<p><small>Add internships, organizations or awards here when you have them.</small></p></div>
+</div>
+</section>
+
+<section id="courses">
+<h2>Coursework</h2>
+<p class="lead">Courses that are shaping how I think as an engineer.</p>
+<div class="grid">
+<div class="card"><h3>Computer Engineering as a Discipline</h3><p>Overview of the CpE profession, emerging technologies, and how engineers tackle real problems such as the UN SDGs.</p><span class="chip">Pitching</span><span class="chip">Research</span><span class="chip">Teamwork</span><p><a href="#projects">See the LearnSmart project →</a></p></div>
+<div class="card"><h3>MATH 165 · College Algebra with Analytic Geometry</h3><p>Algebraic functions, equations and inequalities, and conic sections. Challenging, but it trains careful step-by-step reasoning.</p><span class="chip">Problem solving</span><span class="chip">Logic</span><p><a href="#projects">See my course portfolio →</a></p></div>
+<div class="card"><h3>MATH 166</h3><p>A math course I genuinely enjoy; it builds the quantitative foundation I need for later engineering subjects.</p><span class="chip">Analytical thinking</span></div>
+<div class="card"><h3>GED 105 · Global Migration</h3><p>Examined how technology and careers cross borders, including a video where I interviewed classmates about working in the Philippines versus abroad.</p><span class="chip">Communication</span><span class="chip">Video</span></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<p class="lead">School and passion projects so far.</p>
+<div class="grid">
+<article class="card">
+<svg class="thumb" viewBox="0 0 400 200" role="img" aria-label="Illustration of a handheld quiz device with a screen and keypad"><rect width="400" height="200" rx="10" fill="#1d3557"/><rect x="140" y="20" width="120" height="160" rx="14" fill="#e8eef9"/><rect x="152" y="32" width="96" height="52" rx="6" fill="#0b1220"/><text x="200" y="64" text-anchor="middle" fill="#7fd4a6" font-family="monospace" font-size="13">QUIZ CODE:</text><g fill="#b3202a"><circle cx="170" cy="110" r="9"/><circle cx="200" cy="110" r="9"/><circle cx="230" cy="110" r="9"/><circle cx="170" cy="138" r="9"/><circle cx="200" cy="138" r="9"/><circle cx="230" cy="138" r="9"/></g></svg>
+<h3>LearnSmart</h3>
+<p>Adaptive learning site paired with a low-cost, microcontroller-based quiz device for accessible learning in public schools (SDG 4: Quality Education).</p>
+<p><strong>Key features:</strong> teacher creates a quiz and gets a unique code; students enter the code on the device keypad; the device fetches the quiz over Wi-Fi; teacher dashboard shows answers and who needs help; rechargeable battery.</p>
+<span class="chip">Arduino</span><span class="chip">ESP8266 Wi-Fi</span><span class="chip">Web dashboard</span><span class="chip">Canva</span>
+<p><a href="#" data-todo="Link to your concept paper / digital poster">Poster &amp; concept paper</a> · <a href="#" data-todo="Link to recorded pitch">Recorded pitch</a></p>
+</article>
+<article class="card">
+<a class="video" href="#" data-todo="Paste your AI in healthcare video link" aria-label="Open the AI in healthcare video"><span aria-hidden="true">▶</span>AI in Healthcare<small>Click to watch (add link)</small></a>
+<h3>Emerging Tech Video: AI in Healthcare</h3>
+<p>A 2-minute video presentation, with cited sources, on how artificial intelligence is changing healthcare.</p>
+<span class="chip">Scriptwriting</span><span class="chip">Video editing</span><span class="chip">Research</span>
+</article>
+<article class="card">
+<a class="video" href="#" data-todo="Paste your GED105 video link" aria-label="Open the Global Migration video"><span aria-hidden="true">▶</span>Global Migration<small>Click to watch (add link)</small></a>
+<h3>Global Migration in the Eyes of Technical Students</h3>
+<p>A 3-5 minute video built from chats with five classmates about working in the Philippines or abroad after graduating.</p>
+<span class="chip">Interviewing</span><span class="chip">Presentation</span>
+</article>
+<article class="card">
+<svg class="thumb" viewBox="0 0 400 200" role="img" aria-label="Illustration of a parabola graph for the MATH 165 portfolio"><rect width="400" height="200" rx="10" fill="#f0f4fb"/><path d="M40 160H360M200 20V180" stroke="#8aa0c4" stroke-width="2"/><path d="M90 30Q200 330 310 30" fill="none" stroke="#b3202a" stroke-width="4"/></svg>
+<h3>MATH 165 Course Portfolio</h3>
+<p>A Microsoft Sway portfolio reflecting on the Design, Enactment and Results of my College Algebra learning.</p>
+<span class="chip">Microsoft Sway</span><span class="chip">Reflection</span>
+<p><a href="#" data-todo="Paste your Sway link">Open the Sway →</a></p>
+</article>
+</div>
+</section>
+
+<section id="journey">
+<h2>Personal Journey</h2>
+<p class="lead">My first steps at Mapúa: the struggles, the wins, and what I'm learning about myself.</p>
+<div class="two">
+<div class="tl">
+<div><h3>Starting out</h3><p>Entering Computer Engineering meant adjusting to a faster pace and a heavier math load.</p></div>
+<div><h3>Challenges</h3><p>MATH 165 pushed me the most. I overcame it by practicing steadily, reviewing mistakes, and asking classmates for help.</p></div>
+<div><h3>Growth</h3><p>Group projects like LearnSmart taught me to divide work, communicate clearly, and present ideas with confidence.</p></div>
+<div><h3>What's next</h3><p>Learn more coding, build more hardware projects, and gain experience in the Philippines before exploring opportunities abroad.</p></div>
+</div>
+<div>
+<a class="video" href="#" data-todo="Paste your vlog link (YouTube / Drive)" aria-label="Open my personal journey vlog"><span aria-hidden="true">▶</span>My Journey Vlog<small>Click to watch (add link)</small></a>
+<p class="lead">Add a short vlog here, or keep the written timeline as your narrative.</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p class="lead">Want to collaborate or say hi? Reach out.</p>
+<div class="two">
+<div class="card">
+<h3>Find me</h3>
+<p>📧 <a href="mailto:youremail@example.com" id="mail">youremail@example.com</a></p>
+<p>💼 <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></p>
+<p>🐙 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></p>
+<p>📘 <a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a></p>
+</div>
+<form class="card" id="cf">
+<label for="n">Name</label><input id="n" required>
+<label for="e">Email</label><input id="e" type="email" required>
+<label for="m">Message</label><textarea id="m" rows="4" required></textarea>
+<button type="submit">Send message</button>
+</form>
+</div>
+</section>
+</main>
+<footer>© 2026 Benylde Dane C. Urquico · Computer Engineering, Mapúa University</footer>
+
+<script>
+var EMAIL="youremail@example.com";
+document.getElementById("menu").onclick=function(){var l=document.getElementById("links");var o=l.classList.toggle("open");this.setAttribute("aria-expanded",o)};
+document.querySelectorAll("#links a").forEach(function(a){a.onclick=function(){document.getElementById("links").classList.remove("open")}});
+document.getElementById("theme").onclick=function(){var r=document.documentElement;var d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);r.setAttribute("data-theme",d?"light":"dark")};
+document.querySelectorAll("[data-todo]").forEach(function(a){a.onclick=function(e){e.preventDefault();alert("Add your link here: "+a.dataset.todo)}});
+document.getElementById("cf").onsubmit=function(e){e.preventDefault();var s=encodeURIComponent("Portfolio message from "+n.value);var b=encodeURIComponent(m.value+"\n\nFrom: "+n.value+" ("+e2.value+")");location.href="mailto:"+EMAIL+"?subject="+s+"&body="+b};
+var e2=document.getElementById("e"),n=document.getElementById("n"),m=document.getElementById("m");
+</script>
+</body>
+</html>
